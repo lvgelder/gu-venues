@@ -11,3 +11,7 @@ class VenueForm(wtf.Form):
     number = wtf.TextField('Number', validators=[validators.Required()])
     lat = wtf.TextField('Lat', validators=[validators.Required()])
     long = wtf.TextField('Long', validators=[validators.Required()])
+
+
+class SearchForm(wtf.Form):
+    location = wtf.TextField('Postcode or City', validators=[validators.Required()])

@@ -25,7 +25,7 @@ def get_geo_loc_twice(postcode):
         return get_geolocation_including_city(postcode)
 
 def get_geolocation(postcode):
-    url = "http://maps.google.com/maps/geo?q="+postcode+",UK&output=json&sensor=false&key="+settings.GOOGLE_MAPS_KEY
+    url = "http://maps.google.com/maps/geo?q="+postcode+",UK&output=json&sensor=false"
     location = get_from_geo(url)
     status = location["Status"]["code"]
     if status != 200:
@@ -41,7 +41,7 @@ def get_geolocation(postcode):
 
 
 def get_geolocation_including_city(postcode):
-    url = "http://maps.google.com/maps/geo?q="+postcode+",UK&output=json&sensor=false&key="+settings.GOOGLE_MAPS_KEY
+    url = "http://maps.google.com/maps/geo?q="+postcode+",UK&output=json&sensor=false"
     location = get_from_geo(url)
     status = location["Status"]["code"]
     if status != 200:
