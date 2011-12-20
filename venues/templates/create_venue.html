@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 id="">Craete a new venue</h1>
+    <form action="{{ url_for('new_venue') }}" method="post" accept-charset="utf-8">
+        {{ form.csrf_token }}
+        <p>
+            <label for="name">{{ form.name.label }}</label>
+
+            {{ form.name|safe }}
+
+            {% if form.name.errors %}
+            <ul class="errors">
+                {% for error in form.name.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+        <p>
+            <label for="description">{{ form.description.label }}</label>
+
+            {{ form.description|safe }}
+
+            {% if form.description.errors %}
+            <ul class="errors">
+                {% for error in form.description.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+        <p>
+            <label for="number">{{ form.number.label }}</label>
+
+            {{ form.number|safe }}
+
+            {% if form.number.errors %}
+            <ul class="errors">
+                {% for error in form.number.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+         <p>
+            <label for="street">{{ form.street.label }}</label>
+
+            {{ form.street|safe }}
+
+            {% if form.street.errors %}
+            <ul class="errors">
+                {% for error in form.street.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+        <p>
+            <label for="postcode">{{ form.postcode.label }}</label>
+
+            {{ form.postcode|safe }}
+
+            {% if form.postcode.errors %}
+            <ul class="errors">
+                {% for error in form.postcode.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+         <p>
+            <label for="city">{{ form.city.label }}</label>
+
+            {{ form.city|safe }}
+
+            {% if form.city.errors %}
+            <ul class="errors">
+                {% for error in form.city.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+         <p>
+            <label for="venueId">{{ form.venueId.label }}</label>
+
+            {{ form.venueId|safe }}
+
+            {% if form.venueId.errors %}
+            <ul class="errors">
+                {% for error in form.venueId.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+         <p>
+            <label for="long">{{ form.long.label }}</label>
+
+            {{ form.long|safe }}
+
+            {% if form.long.errors %}
+            <ul class="errors">
+                {% for error in form.long.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+         <p>
+            <label for="long">{{ form.lat.label }}</label>
+
+            {{ form.lat|safe }}
+
+            {% if form.lat.errors %}
+            <ul class="errors">
+                {% for error in form.lat.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+        <p><input type="submit" value="Save post"/></p>
+    </form>
+{% endblock content %}
